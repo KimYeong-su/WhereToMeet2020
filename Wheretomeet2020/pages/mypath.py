@@ -1,7 +1,7 @@
 import requests
 import json
 
-kakao_key = 'f3d88811fb994c29e6011bfed00e1684'
+kakao_key = '발급받은 api키'
 kakao_url = '/v2/local/search/address.json'
 kakao_host = 'https://dapi.kakao.com'
 kakao_headers = {'Authorization': f'KakaoAK {kakao_key}'}
@@ -43,11 +43,12 @@ def time(array):
     '역삼역': (127.03646946847, 37.5006744185994),
     }
 
-    OD_key = 'aI7cpmNbnP0N8DekP3ZKGmBhbz0y6dmnB0/8aDDQ17M'
+    OD_key = '발급받능 api키'
     my_time_min = 1000000
     my_stn = ""
     X = float(0)
     Y = float(0)
+    
     for stn in spots.keys():
         SX = spots[stn][0]
         SY = spots[stn][1]
@@ -65,6 +66,7 @@ def time(array):
         if my_time < my_time_min:
             my_time_min = my_time
             my_stn = stn
+            my_time
             X = float(spots[stn][0])
             Y = float(spots[stn][1])
     

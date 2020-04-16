@@ -25,6 +25,9 @@ def search(request, people):
         context = {
             'result': result,
             'place' : place,
+            'place_name' : adlist,
+            'counts' : people,
+            # 'arrive_time': arrive_time,
         }
         return render(request, 'pages/map_result.html', context)           
     
